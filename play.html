@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style/base.css">
+		<link rel="stylesheet" href="style/play.css">
+		<title>にほんTango</title>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<input type="range" min="1" max="100" value="100" id="general_volume_range">
+		<section id="game">
+			<div id="big_display"></div>
+			<div id="small_display"></div>
+
+				<input type="text" id="answer_input">
+				<input id="verifyAnswer_button" type="button" value="Vérifier" onclick="verifyAnswer();">
+
+				<div id="correction_output"></div>
+				<input id="nextQuestion_button" type="button" value="D'accord" onclick="nextQuestion();">
+
+		</section>
+
+		<script src="scripts/base/utils.js"></script>
+		<script src="scripts/base/banks.js"></script>
+		<script src="scripts/base/interface.js"></script>
+		<script src="scripts/play/match.js"></script>
+		<script src="scripts/play/interface.js"></script>
+		<script src="scripts/play/main.js"></script>
+
+	</body>
+</html>

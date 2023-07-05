@@ -1,0 +1,490 @@
+:root {
+	--main-bg-color: #000;
+	--main-text-color: #000;
+	--main-outline-color: #000;
+
+	--small-bg-color: #000;
+	--input-shadow-color: #000;
+	--input-text-color: #000;
+
+	--slider-color1: #000;
+	--slider-color2: #000;
+
+	--button-bg-color: #000;
+	--button-text-color: #000;
+	--button-shadow-color: #000;
+
+	--button-hover-bg-color: #000;
+	--button-active-bg-color: #000;
+	--button-disabled-bg-color: transparent;
+	--button-disabled-shadow-color: #000;
+
+	--button-on-shadow-color: #000;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	word-wrap: break-word;
+	font-family: serif;
+	font-size: 1em;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+
+	color: #000;
+	background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section#game {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	
+	width: 100%;
+	min-height: 100%;
+
+	background-color: var(--main-bg-color);
+}
+
+section#game div#big_display {
+	padding: 12px;
+	margin: 0;
+	width: 80%;
+
+	background-color: none;
+	color: var(--main-text-color);
+
+	border-radius: 8px;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+	padding: 12px;
+
+	font-weight: bold;
+	text-align: center;
+	font-size: 4em;
+}
+
+section#game div#small_display {
+	padding: 12px;
+	margin: 0;
+	width: 80%;
+
+	background-color: var(--small-bg-color);
+	color: var(--main-text-color);
+
+	border-radius: 8px;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+	padding: 4px;
+
+	font-weight: bold;
+	text-align: center;
+}
+
+section#game input[type="text"] {
+	padding: 12px;
+	margin: 12px;
+	width: 80%;
+
+	background-color: #fff;
+	color: var(--input-text-color);
+
+	border-radius: 8px;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+	padding: 8px;
+
+	font-weight: bold;
+	font-size: 1.5em;
+	text-align: center;
+
+	box-shadow: inset 0em 0em 8px var(--input-shadow-color);
+}
+
+section#game div#user_correction_output {
+	padding: 12px;
+	margin: 12px;
+	width: 80%;
+
+	background-color: #fff;
+	color: black;
+
+	border-radius: 8px;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+	padding: 8px;
+
+	font-weight: bold;
+	font-size: 1.5em;
+	text-align: center;
+
+	box-shadow: inset 0em 0em 8px #f00;
+}
+
+section#game input[type="button"] {
+	padding: 0;
+	margin: 0;
+	width: 256px;
+
+	background-color: var(--button-bg-color);
+	color: var(--button-text-color);
+
+	border-radius: 8px;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+	padding: 6px;
+
+	font-weight: bold;
+
+	box-shadow: inset 0 0 8px var(--button-shadow-color);
+}
+section#game input[type="button"]::-moz-focus-inner {
+  border: 0;
+}
+section#game input[type="button"]:hover {
+	background-color: var(--button-hover-bg-color);
+}
+section#game input[type="button"]:active {
+	background-color: var(--button-active-bg-color);
+}
+section#game input[type="button"]:disabled {
+	background-color: var(--button-disabled-bg-color);
+	box-shadow: inset 0 0 8px var(--button-disabled-shadow-color);
+	cursor: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section#menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	
+	width: 100%;
+	min-height: 100%;
+
+	background-color: var(--main-bg-color);
+}
+
+section#menu div#title {
+	padding: 0;
+	margin: 0;
+	width: 80%;
+
+	background-color: none;
+	color: var(--main-text-color);
+
+	border-radius: 8px;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+
+	font-weight: bold;
+	text-align: center;
+	font-size: 4em;
+}
+
+
+
+
+
+
+
+div.horizontal {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	padding: 10px;
+	margin: 5px;
+
+	/*outiline*/
+	outline: solid;
+	border-radius: 8px;
+	outline-color: var(--main-outline-color);
+	outline-width: 2px;
+	outline-offset: -2px;
+}
+
+div.vertical {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	padding: 10px;
+	margin: 5px;
+
+	/*outiline*/
+	outline: solid;
+	border-radius: 8px;
+	outline-color: var(--main-outline-color);
+	outline-width: 2px;
+	outline-offset: -2px;
+}
+
+div.vertical > span {
+	display: block;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: var(--main-text-color);
+}
+
+
+div.line {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	flex-grow: 1;
+
+	padding: 5px;
+	width: 100%;
+}
+
+/*buttons labels*/
+div.line > * {
+	margin: 0px 5px;
+}
+
+/*buttons labels*/
+div.line span {
+	flex: 0.333 1 0;
+	margin: auto 5px;
+	color: var(--main-text-color);
+}
+
+
+
+
+
+
+
+
+
+
+/*buttons input*/
+section#menu input[type="button"] {
+	white-space: pre-wrap;
+	flex: 1 1 0;
+	width: 0;
+
+	padding: 5px;
+
+	background-color: var(--button-bg-color);
+	color: var(--button-text-color);
+
+	border-radius: 8px;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+
+	box-shadow: inset 0 0 8px var(--button-shadow-color);
+}
+section#menu input[type="button"]::-moz-focus-inner {
+  border: 0;
+}
+section#menu input[type="button"]:hover {
+	background-color: var(--button-hover-bg-color);
+}
+section#menu input[type="button"]:active {
+	background-color: var(--button-active-bg-color);
+}
+section#menu input[type="button"]:disabled {
+	background-color: var(--button-disabled-bg-color);
+	box-shadow: inset 0 0 8px var(--button-disabled-shadow-color);
+	cursor: auto;
+}
+
+/*text input*//*
+section#menu input[type="text"] {
+	flex: 1 1 auto;
+
+	padding: 5px;
+	width: 0;
+
+	background-color: #fff;
+	color: var(--input-text-color);
+
+	border-radius: 8px;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+
+	font-weight: bold;
+	font-size: 1em;
+
+	box-shadow: inset 0em 0em 8px var(--input-shadow-color);
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* other */
+
+input[type="button"]:hover {
+  cursor: pointer;
+}
+
+canvas {
+	/*background-color: #fffa;*/
+	pointer-events: none;
+  width:  100%;
+  height: 100%;
+	display: block;
+
+	z-index: 10;
+
+	/*annoying broblem solved : https://support.mozilla.org/en-US/questions/1271761*/
+	position: fixed;
+}
+
+
+input[type="range"] {
+	top: 20px;
+	left: calc(100% - 110px);
+
+	z-index: 20;
+
+	position: absolute;
+
+	-webkit-appearance: none;
+	        appearance: none;
+	border: none;
+	outline: none;
+	width: 100px;
+	height: 8px;
+	border-radius: 8px;
+
+	background: var(--slider-color1);
+
+	opacity: 0.5;
+	transition: opacity .2s;
+}
+
+input[type="range"]:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	        appearance: none;
+	border: none;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: var(--slider-color2);
+}
+
+input[type="range"]::-moz-range-thumb {
+	border: none;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: var(--slider-color2);
+}
+
+
+
+
+
+

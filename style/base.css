@@ -1,0 +1,102 @@
+:root {
+	--main-bg-color: #000;
+	--main-text-color: #000;
+	--main-outline-color: #000;
+
+	--small-bg-color: #000;
+	--input-shadow-color: #000;
+	--input-text-color: #000;
+
+	--slider-color1: #000;
+	--slider-color2: #000;
+
+	--button-bg-color: #000;
+	--button-text-color: #000;
+	--button-shadow-color: #000;
+
+	--button-hover-bg-color: #000;
+	--button-active-bg-color: #000;
+	--button-disabled-bg-color: transparent;
+	--button-disabled-shadow-color: #000;
+
+	--button-on-shadow-color: #000;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	word-wrap: break-word;
+	font-family: serif;
+	font-size: 1em;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+
+	color: #000;
+	background-color: #fff;
+}
+
+/*ELEMENTS*/
+
+input:hover {
+  cursor: pointer;
+}
+
+canvas {
+	pointer-events: none;
+	width:  100%;
+	height: 100%;
+	display: block;
+
+	z-index: 10;
+
+	position: fixed;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	        appearance: none;
+	border: none;
+	outline: none;
+	width: 100px;
+	height: 8px;
+	border-radius: 8px;
+	background: var(--slider-color1);
+
+	top: 20px;
+	left: calc(100% - 110px);
+	z-index: 20;
+	position: absolute;
+	transition: opacity .2s;
+	opacity: 0.5;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	        appearance: none;
+	border: none;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: var(--slider-color2);
+}
+
+input[type="range"]::-moz-range-thumb {
+	border: none;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: var(--slider-color2);
+}

@@ -1,0 +1,163 @@
+
+
+
+
+section#menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	
+	width: 100%;
+	min-height: 100%;
+
+	background-color: var(--main-bg-color);
+}
+
+section#menu div#title {
+	padding: 0;
+	margin: 0;
+	width: 80%;
+
+	background-color: none;
+	color: var(--main-text-color);
+
+	border-radius: 8px;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+
+	font-weight: bold;
+	text-align: center;
+	font-size: 4em;
+}
+
+
+
+
+
+
+
+div.horizontal {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	padding: 10px;
+	margin: 5px;
+
+	/*outiline*/
+	outline: solid;
+	border-radius: 8px;
+	outline-color: var(--main-outline-color);
+	outline-width: 2px;
+	outline-offset: -2px;
+}
+
+div.vertical {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	padding: 10px;
+	margin: 5px;
+
+	/*outiline*/
+	outline: solid;
+	border-radius: 8px;
+	outline-color: var(--main-outline-color);
+	outline-width: 2px;
+	outline-offset: -2px;
+}
+
+div.vertical > span {
+	display: block;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: var(--main-text-color);
+}
+
+
+div.line {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	flex-grow: 1;
+
+	padding: 5px;
+	width: 100%;
+}
+
+/*buttons labels*/
+div.line > * {
+	margin: 0px 5px;
+}
+
+/*buttons labels*/
+div.line span {
+	flex: 0.333 1 0;
+	margin: auto 5px;
+	color: var(--main-text-color);
+}
+
+
+
+
+
+
+
+
+
+
+/*buttons input*/
+section#menu input[type="button"] {
+	white-space: pre-wrap;
+	flex: 1 1 0;
+	width: 0;
+
+	padding: 5px;
+
+	background-color: var(--button-bg-color);
+	color: var(--button-text-color);
+
+	border-radius: 8px;
+	border: none;
+	outline: none;
+
+	box-sizing: border-box;
+
+	box-shadow: inset 0 0 8px var(--button-shadow-color);
+}
+section#menu input[type="button"]::-moz-focus-inner {
+  border: 0;
+}
+section#menu input[type="button"]:hover {
+	background-color: var(--button-hover-bg-color);
+}
+section#menu input[type="button"]:active {
+	background-color: var(--button-active-bg-color);
+}
+section#menu input[type="button"]:disabled {
+	background-color: var(--button-disabled-bg-color);
+	box-shadow: inset 0 0 8px var(--button-disabled-shadow-color);
+	cursor: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

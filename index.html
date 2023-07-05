@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style/base.css">
+		<link rel="stylesheet" href="style/index.css">
+		<title>EnglishTango</title>
+	</head>
+	<body>
+		<input type="range" min="0" max="100" value="100" id="general_volume_range">
+		<section id="menu">
+			<div id="title">EnglishTango</div>
+			<div class="horizontal">
+				<div class="vertical" style="width: 400px;">
+					<span>Configuration</span>
+					<div class="line">
+						<span>Temps</span>
+						<input type="button" onclick="switchOption(this, 'tenses_options', 'selected_tenses_option')" id="tenses_option_button">
+					</div>
+					<div class="line">
+						<span>Réponses</span>
+						<input type="button" onclick="switchOption(this, 'responses_options', 'selected_responses_option')" id="responses_option_button">
+					</div>
+					<div class="line">
+						<span>Thème</span>
+						<input type="button" onclick="switchOption(this, 'themes', 'selected_theme'); loadTheme()" id="switch_theme_button">
+					</div>
+				</div>
+
+				<div class="vertical" style="width: 400px;" id="word_banks_panel">
+					<span>Bacs de mots</span>
+					<div class="line">
+						<input type="button" value="Jouer" onclick="startPlaying()">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="scripts/base/utils.js"></script>
+		<script src="scripts/base/banks.js"></script>
+		<script src="scripts/base/interface.js"></script>
+		<script src="scripts/index/interface.js"></script>
+		<script src="scripts/index/main.js"></script>
+
+	</body>
+</html>

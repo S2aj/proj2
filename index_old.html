@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<title>にほんTango</title>
+	</head>
+	<body>
+		<canvas id="canvas" width="1920" height="570"></canvas>
+
+		<input type="range" min="1" max="100" value="100" class="slider" id="general_volume">
+
+		<section id="game" style="display: none;">
+			<div id="big_display"></div>
+			<div id="small_display"></div>
+
+				<input type="text" id="user_answer_input">
+				<input id="verifyAnswer_button" type="button" value="Vérifier" onclick="verifyAnswer();">
+
+				<div id="user_correction_output"></div>
+				<input id="nextQuestion_button" type="button" value="D'accord" onclick="nextQuestion();">
+
+		</section>
+
+		<section id="menu" style="display: flex;">
+			<div id="title">AnglaisTango</div>
+			<div class="horizontal">
+				<div class="vertical" style="width: 400px;">
+
+					<span>Filtres du vocabulaire</span>
+
+					<div class="line">
+						<span>Mots</span>
+						<input type="button" onclick="switchVariableWithList(this, 'words_filter')" id="words_filter_button">
+					</div>
+					<div class="line">
+						<span>verbes</span>
+						<input type="button" onclick="switchVariableWithList(this, 'verbs_filter')" id="verbs_filter_button">
+					</div>
+
+					<span>Configuration de la partie</span>
+					<div class="line">
+						<span>mode</span>
+						<input type="button" onclick="switchVariableWithList(this, 'match_mode')" id="match_mode_button">
+					</div>
+					<div class="line">
+						<span>questions</span>
+						<input type="button" onclick="switchVariableWithList(this, 'questions_policy')" id="questions_policy_button">
+					</div>
+					<div class="line">
+						<span>thème</span>
+						<input type="button" onclick="switchTheme(this)" id="switch_theme_button">
+					</div>
+				</div>
+
+				<div class="vertical" style="width: 400px;" id="word_banks_panel">
+					<span>Bacs de mots</span>
+					<div class="line">
+						<input type="button" value="Jouer" onclick="startPlaying()">
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- app -->
+		<script src="scripts_old/engine.js"></script>
+		<script src="scripts_old/utils.js"></script>
+		<script src="scripts_old/interractions.js"></script>
+		<script src="scripts_old/data.js"></script>
+		<script src="scripts_old/match.js"></script>
+		<script src="scripts_old/main.js"></script>
+
+		<!-- starting app -->
+		<script>
+			start()
+		</script>
+	
+</body></html>
